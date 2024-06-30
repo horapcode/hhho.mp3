@@ -1,0 +1,99 @@
+/* tablet and mobile */
+@media (max-width: 63.9375em){
+    .navbar__app,
+    .header__right-change,
+    .header__right-upload,
+    .music-control__left,
+    .music-control__right {
+        display: none;
+    }
+
+    .navbar__app {
+        z-index: 5;
+        animation: slip linear .1s;
+    }
+    .header-wrapper-navbar-icon,
+    .navbar__app-header-close {
+        display: block;
+    }
+    .navbar__app {
+        background-color: var(--primary-color);
+    }
+    .header__right-setting {
+        margin-left: 0;
+    }
+    .music-control__center {
+        width: 202%;
+        left: -52%;
+    }
+
+}
+
+/* tablet  740 --> 1023px*/
+@media (max-width: 63.9375em) and (min-width: 46.25em) {
+    .main-nextsong,
+    .nextsong__option,
+    .option-all__song-slider {
+        display: none;
+    }
+
+    
+    .header-wrapper {
+        left: 0;
+        right: 0;
+        }
+    .header__width-search {
+        width: 450px;
+    }
+        
+    .main-container {
+        left: 0;
+        right: 0;
+    }
+    .main-container-zingchart {
+        margin: 0 70px;
+    }
+    
+            
+    .music-control__progress-time-start {
+        margin-right: 4px;
+        position: absolute;
+        left: -28px;
+    }
+}
+
+/* mobile   739px */
+@media (max-width: 46.1875em){
+    .main-container-discover,
+    .main-container-zingchart,
+    .auth-form__socials--sms,
+    .main-container-pertional,
+    .header__width-search-input:focus ~ .header__width-search-sub {
+        display: none;
+    }
+   
+    .music-control__center {
+        width: 202%;
+        left: -52%;
+    }
+    .main-nextsong {
+        top: 52px;
+        left: 0;
+    }
+
+    .main__app {
+        margin-left: 0;
+    }
+    .header-wrapper {
+        left: 0;
+        right: 0;
+    }
+    .auth-form {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .auth-form__socials {
+        display: flex;
+        justify-content: center;
+    }
+}

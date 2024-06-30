@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hhh Mp3</title>
+    <link rel="icon" href="/assets/img/logo/New Project.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link rel="stylesheet" href="/assets/css/base.css">
+    <link rel="stylesheet" href="/assets/css/khampha.css">
+    <link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/font/fontawesome-free-6.5.2-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+  <main class="main__app">
+        <!-- BEGIN NAVBAR -->
+            <nav class="navbar__app">
+                <div class="navbar__app-header">
+                    <div class="navbar__app-logo"></div>
+                    <div class="navbar__app-header-close">
+                        <i class="fa-solid fa-circle-xmark navbar__app-header-close-icon"></i>
+                    </div>
+                </div>
+                <div class="navbar__app-persional">
+                    <ul class="navbar__app-list">
+                        <!-- navbar__app-item--active -->
+                        <li class="navbar__app-item">
+                            <a href="/index.html" class="navbar__app-item-link">
+                                <i class="navbar__app-icon far fa-play-circle navbar__app-item--active "></i>
+                                Cá Nhân
+                            </a>
+                        </li>
+                        <li class="navbar__app-item active">
+                                <i class="navbar__app-icon fas fa-compact-disc"></i>
+                                Khám Phá
+                        </li>
+                        <li class="navbar__app-item">
+                            <i class="navbar__app-icon fas fa-chart-line"></i>
+                                #zingchart
+                        </li>
+                        <li class="navbar__app-item navbar__app-item-radio">
+                            <i class="navbar__app-icon fas fa-broadcast-tower"></i>
+                                Radio
+                            <span>Live</span>
+                        </li>
+                        <li class="navbar__app-item">
+                            <i class="navbar__app-icon far fa-list-alt"></i>
+                                Theo Dõi
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar__line"></div>
+                <div class="navbar__library">
+                    <div class="navbar__library-top">
+                        <ul class="navbar__library-top-list">
+                            <li class="navbar__library-top-list-item navbar__app-item">
+                                <i class="navbar__app-icon fas fa-music"></i>
+                                Nhạc Mới
+                            </li>
+                            <li class="navbar__library-top-list-item navbar__app-item">
+                                <i class="navbar__app-icon fab fa-buromobelexperte"></i>
+                                Thể Loại
+                            </li>
+                            <li class="navbar__library-top-list-item navbar__app-item">
+                                <i class="navbar__app-icon fas fa-star"></i>
+                                Top 100
+                            </li>
+                            <li class="navbar__library-top-list-item navbar__app-item">
+                                <i class="navbar__app-icon fas fa-photo-video"></i>
+                                MV
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar__library-center">
+                        <span class="navbar__library-top-vip-heading">Nghe nhạc không quảng cáo cùng kho nhạc VIP</span>
+                        <span class="navbar__library-top-vip-body">Nâng cấp VIP</span>
+                    </div>
+                    <div class="navbar__library-bot">
+                        <div class="navbar__library-bot-heading">
+                            Thư viện
+                            <div class="navbar__library-bot-heading-option">
+                                <i class="fas fa-pencil-alt"></i>
+                            </div>
+                        </div>
+                        <ul class="navbar-library-bot-list">
+                            <li class="navbar-library-bot-item navbar__app-item">
+                                <i class="navbar__app-icon fas fa-music"></i>
+                                Bài hát
+                            </li>
+                            <li class="navbar-library-bot-item navbar__app-item">
+                                <i class="navbar__app-icon far fa-file-audio"></i>
+                                Playlist
+                            </li>
+                            <li class="navbar-library-bot-item navbar__app-item">
+                                <i class="navbar__app-icon fas fa-clock"></i>
+                                Gần đây
+                            </li>
+                        </ul>
+                        <div class="navbar-library-bot-extra ">
+                            <span>Replay</span>
+                            <span class="navbar-library-bot-extra-option ">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        <div class="navbar-library-bot-extra ">
+                            <span>Nhạc xuân</span>
+                            <span class="navbar-library-bot-extra-option">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                        <div class="navbar-library-bot-extra ">
+                            <span>Nhạc trung quốc</span>
+                            <span class="navbar-library-bot-extra-option">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar__add-playlist">
+                    <i class="fas fa-plus "></i>
+                    <span>Tạo playlist mới</span>
+                </div>   
+            </nav>
+            <!-- END NAVBAR -->
+            <!-- BEGIN CONTAINER -->
+            <div class="main-container">
+                <div class="header-wrapper">
+                    <div class="header-wrapper-navbar-icon">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <div class= "header">
+                        <div class="header__undo">
+                            <i class="fas fa-arrow-left hover "></i>
+                            <i class="fas fa-arrow-right hover header__undo--disable"></i>
+                        </div>
+                        <div class="header__width-search">
+                            <i class="fas fa-search header__width-search-icon"></i>
+                            <input type="text" class="header__width-search-input " placeholder="Nhập tên bài hát, nghệ sĩ hoặc MV . . .">
+                            <div class="header__width-search-sub">
+                                <span class="header__width-search-sub-header">Đề xuất cho bạn</span>
+                                <ul class="header__width-search-sub-list">
+                                    <li class="header__width-search-sub-item">
+                                        <a href="#" class="header__width-search-sub-item-link">
+                                            <i class="fas fa-arrows-alt-h "></i>
+                                            <span>là ai</span>
+                                        </a>
+                                    </li>
+                                    <li class="header__width-search-sub-item">
+                                        <a href="#" class="header__width-search-sub-item-link">
+                                            <i class="fas fa-arrows-alt-h "></i>
+                                            <span>Em là của anh</span>
+                                        </a>
+                                    </li>
+                                    <li class="header__width-search-sub-item">
+                                        <a href="#" class="header__width-search-sub-item-link">
+                                            <i class="fas fa-arrows-alt-h "></i>
+                                            <span>Đưa nhau đi trốn</span>
+                                        </a>
+                                    </li>
+                                    <li class="header__width-search-sub-item">
+                                        <a href="#" class="header__width-search-sub-item-link">
+                                            <i class="fas fa-arrows-alt-h "></i>
+                                            <span>Bạn đời</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__right">
+                            <div class="header__right-change">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <div class="header__right-upload">
+                                <i class="fas fa-upload"></i>
+                            </div>
+                            <div class="header__right-overlay hiden"></div>
+                                <div class="header__right-setting">
+                                <i class="fas fa-cog header__right-setting-icon"></i>
+                                <ul class="header__right-setting-list">
+                                    <li class="header__right-setting-item">
+                                        <i class="fas fa-ban"></i>
+                                        Danh sách chặn
+                                    </li>
+                                    <li class="header__right-setting-item">
+                                        <i class="far fa-play-circle"></i>
+                                        Chất lượng nhạc
+                                    </li>
+                                    <li class="header__right-setting-item">
+                                        <i class="fas fa-external-link-square-alt"></i>
+                                        Trình phát nhạc
+                                    </li>
+                                    <span class="header__right-setting-line"></span>
+                                    <li class="header__right-setting-item">
+                                        <i class="fas fa-info-circle"></i>
+                                        Giới thiệu
+                                    </li>
+                                    <li class="header__right-setting-item">
+                                        <i class="far fa-flag"></i>
+                                        Góp ý
+                                    </li>
+                                    <li class="header__right-setting-item">
+                                        <i class="fas fa-phone-alt"></i>
+                                        Liên hệ
+                                    </li>
+                                    <li class="header__right-setting-item">
+                                        <i class="fab fa-adversal"></i>
+                                        Quảng cáo
+                                    </li>
+                                    <li class="header__right-setting-item">
+                                        <i class="fas fa-notes-medical"></i>
+                                        Thoả thuận sử dụng
+                                    </li>
+                                    <li class="header__right-setting-item">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Chính sách bảo mật
+                                    </li>
+                                    
+                                </ul>
+                                </div>
+                            <div class="header__user">
+                                <a href="#" class="header__user-link hover">
+                                    <img src="https://cellphones.com.vn/sforum/wp-content/uploads/2023/10/avatar-trang-4.jpg" alt="" class="header__user-img">
+                                </a>
+                                <ul class="header__user-list">
+                                    <li class="header__user-list-item js-login">
+                                        Đăng nhập
+                                    </li>
+                                    <li class="header__user-list-item">
+                                        cài đặt 
+                                    </li>
+                                    <li class="header__user-list-item">
+                                        Đăng xuất
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- BEGIN SLIDER-->
+                <div class="main-container-discover">
+                    <div class="container-discover__slider">
+                        <div class="container-discover__slider-item">
+                            <img src="/assets/img/slidersub/1.jpg" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                        <div class="container-discover__slider-item ">
+                            <img src="/assets/img/slidersub/2.jpg" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                        <div class="container-discover__slider-item ">
+                            <img src="/assets/img/slidersub/3.jpg" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                        <div class="container-discover__slider-item">
+                            <img src="/assets/img/slidersub/4.jpg" alt="anh" class="container-discover__slider-item-img">
+                        </div>
+                    </div>
+                </div>
+                <!-- END SLIDER -->
+
+                <div class="main-container-zingchart">
+                    <h1 class="zingchart-headding">
+                        BẢNG XẾP HẠNG
+                    </h1>
+                    <ul class="zingchart-song-list">
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt zingchart__item-first">1</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/5.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Anh Đã Lạc Vào</h3>
+                                <span class="zingchart-song-item-left-body-singer">Green, Đại Mèo Remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Anh Đã Lạc Vào (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:32</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt zingchart__item-second">2</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/9.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Lưu Số Em Đi</h3>
+                                <span class="zingchart-song-item-left-body-singer">Huỳnh Văn, V.P. Tiên</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Lưu Số Em Đi(Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:12</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt zingchart__item-third">3</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/2.jpg);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Chạy Về Khóc Với Anh</h3>
+                                <span class="zingchart-song-item-left-body-singer">Erik, Duzme Remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Chạy Về Khóc Với Anh (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:41</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt">4</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/3.jpg);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Sẵn Sàng Yêu Em Đi Thôi</h3>
+                                <span class="zingchart-song-item-left-body-singer">Sẵn Sàng Yêu Em Đi Thôi</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Sẵn Sàng Yêu Em Đi Thôi (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:00</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt">5</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/4.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Như Một Người Dưng</h3>
+                                <span class="zingchart-song-item-left-body-singer">Nguyễn Thạc Bảo Ngọc Remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Như Một Người Dưng (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:23</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt">6</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/6.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Ôm Nhiều Mộng Mơ</h3>
+                                <span class="zingchart-song-item-left-body-singer">Phát Huy T4 Remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Ôm Nhiều Mộng Mơ (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:32</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt">7</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/7.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Tình Yêu Ngủ Quên</h3>
+                                <span class="zingchart-song-item-left-body-singer">Hoàng Tôn, LyHan, Orinn Remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Tình Yêu Ngủ Quên (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:15</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt">8</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/8.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Ai Chung Tình Được Mãi</h3>
+                                <span class="zingchart-song-item-left-body-singer">Đinh Tùng Huy, ACV Remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Ai Chung Tình Được Mãi (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:33</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt">9</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/4.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Cô Đơn Dành Cho Ai</h3>
+                                <span class="zingchart-song-item-left-body-singer">NAL, LEE KEN, Orinn Remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Cô Đơn Dành Cho Ai (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:22</span>
+                            </div>
+                        </li>
+                        <li class="zingchart-song-item">
+                            <div class="zingchart-song-item-left">
+                                <span class="zingchart-song-item-left-stt">10</span>
+                                <span class="zingchart-song-item-left-line">-</span>
+                                <div class="zingchart-song-item-left-img" style="background-image: url(/assets/img/slider/11.webp);">
+                            </div>
+                            <div class="zingchart-song-item-left-body">
+                                <h3 class="zingchart-song-item-left-body-name">Ánh mắt ta chạm nhau</h3>
+                                <span class="zingchart-song-item-left-body-singer">Ngô Lan Hương, Đại Mèo remix</span>
+                            </div>
+                            </div>
+                            <div class="zingchart-song-item-center">
+                                <span>Ánh mắt ta chạm nhau (Remix)</span>
+                            </div>
+                            <div class="zingchart-song-item-right">
+                                <span class="zingchart-song-item-right-tym">
+                                    <i class="fas fa-heart zingchart-song-item-right-tym-first"></i>
+                                </span>
+                                <span class="zingchart-song-item-right-duration">4:09</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+             <!-- BEGIN NEXT-SONG -->
+             <div class="main-nextsong">
+                <div class="nextsong__option">
+                    <div class="nextsong__option-wrapper">
+                        <!-- nextsong__option-wrapper--active -->
+                        <div class="nextsong__option-wrapper-listplay nextsong__option-wrapper--active">Danh sách phát</div>
+                        <div class="nextsong__option-wrapper-history">Nghe gần đây</div>
+                    </div>
+                    <div class="nextsong__option-alarm">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <div class="nextsong__option-more">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                <div class="nextsong__box">
+                    <div class="nextsong__first">
+                        <div class="nextsong__item ">
+                            <div class="nextsong__item-img" style="background-image: url(/assets/img/slider/0.jpg);">
+                            </div>
+                            <div class="nextsong__item-body">
+                                <span class="nextsong__item-body-heading">Là Ai Từ Bỏ, Là Ai Vô Tình</span>
+                                <span class="nextsong__item-body-depsc">Hương Ly, Jombie</span>
+                            </div>
+                            <div class="nextsong__item-action">
+                                <span class="nextsong__item-action-heart">
+                                    <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                    <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                </span>
+                                <span class="nextsong__item-action-dot">
+                                    <i class="fas fa-ellipsis-h "></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nextsong__last">
+                        <h3 class="nextsong__last-heading">Tiếp theo</h3>
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/slider/4.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Yêu Là Cưới</span>
+                                    <span class="nextsong__item-body-depsc">Phát Hồ, X2X</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/1.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Chạy Về Khóc Với Anh</span>
+                                    <span class="nextsong__item-body-depsc">Erik, Duzme Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/2.jpeg);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Sẵn Sàng Yêu Em Đi Thôi</span>
+                                    <span class="nextsong__item-body-depsc">Woni, Minh Tú, Đại Mèo Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/3.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Như Một Người Dưng</span>
+                                    <span class="nextsong__item-body-depsc">Nguyễn Thạc Bảo Ngọc, Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/4.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Lưu Số Em Đi</span>
+                                    <span class="nextsong__item-body-depsc">Huỳnh Văn, V.P. Tiên</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/5.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Ôm Nhiều Mộng Mơ</span>
+                                    <span class="nextsong__item-body-depsc">Phát Huy T4, Đại Mèo Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/6.jpg);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Tình Yêu Ngủ Quên</span>
+                                    <span class="nextsong__item-body-depsc">Hoàng Tôn, LyHan, Orinn Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/6.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Không Bằng</span>
+                                    <span class="nextsong__item-body-depsc">Na, RIN Music Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/7.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Ai Chung Tình Được Mãi</span>
+                                    <span class="nextsong__item-body-depsc">Đinh Tùng Huy, ACV Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/8.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Cô Đơn Dành Cho Ai</span>
+                                    <span class="nextsong__item-body-depsc">NAL, LEE KEN, Orinn Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/9.webp);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Ánh mắt ta chạm nhau</span>
+                                    <span class="nextsong__item-body-depsc">Ngô Lan Hương, Đại Mèo remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="nextsong__last ">
+                        <ul class="nextsong__list">
+                             <li class="nextsong__item">
+                                <div class="nextsong__item-img" style="background-image: url(/assets/img/music/10.jpeg);">
+                                </div>
+                                <div class="nextsong__item-body">
+                                    <span class="nextsong__item-body-heading">Yêu Đừng Sợ Đau</span>
+                                    <span class="nextsong__item-body-depsc">Ngô Lan Hương, Cukak Remix</span>
+                                </div>
+                                <div class="nextsong__item-action">
+                                    <span class="nextsong__item-action-heart">
+                                        <i class="fas fa-heart nextsong__item-action-heart-icon1"></i>
+                                        <!-- <i class="far fa-heart nextsong__item-action-heart-icon2"></i> -->
+                                    </span>
+                                    <span class="nextsong__item-action-dot">
+                                        <i class="fas fa-ellipsis-h "></i>
+                                    </span>
+                                </div>
+                            </li> 
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END NEXT-SONG -->
+            <!-- BEGIN MUSIC CONTROL  -->
+            <div class="main-music-control">
+                <div class="main-music-control-container">
+                    <div class="col">
+                        <div class="music-control__left">
+                            <div class="music-control__left-img-box">
+                                <div class="music-control__left-img" style="background-image: url( /assets/img/slider/4.webp);"></div>
+                            </div>
+                            
+                            <div class="music-control__left-content">
+                                <span class="music-control__left-content-song">Cưới luôn được không</span>
+                                <span class="music-control__left-content-singer ">Út nhị Cover</span>
+                            </div>
+                            <div class="music-control__left-action ">
+                                <!-- music-control__left-action-tym-box-active -->
+                                <div class="music-control__left-action-tym-box">
+                                    <i class="fas fa-heart music-control__left-action-tym"></i>
+                                    <!-- <i class="far fa-heart music-control__left-action-tym-non"></i> -->
+                                </div>
+                                <i class="fas fa-ellipsis-h music-control__left-action-option"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="music-control__center">
+                            <div class="music-control__center-action music-control__icon">
+                                <i class="fas fa-random music-control__icon1"></i>
+                                <i class="fas fa-caret-left music-control__icon2 "></i>
+                                <div class="music-control__icon-play">
+                                    <i class="fas fa-play music-control__icon3"></i>
+                                    <!-- <i class="fas fa-pause music-control__icon33"></i> -->
+                                </div>
+                                <i class="fas fa-caret-right music-control__icon4 "></i>
+                                <i class="fas fa-redo music-control__icon "></i>
+                            </div>
+                            <div class="music-control__progress">
+                                <span class="music-control__progress-time-start ">00:00</span>
+                                <input id="progress" class="music-control__progress-input" type="range" value="0" step="1" min="0" max="100">
+                               
+                                <span class="music-control__progress-time-duration ">4:37</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ">
+                        <div class="music-control__right">
+                            <i class="music-control__right-icon1 fas fa-photo-video"></i>
+                            <i class="music-control__right-icon2 fas fa-microphone"></i>
+                            <i class="music-control__right-icon3 far fa-square"></i>
+                            <!-- music-control__right--active -->
+                            <div class="music-control__right-volume-icon">
+                                <i class="music-control__right-icon4  fas fa-volume-down"></i>
+                                <!-- <i class="music-control__right-icon5  fas fa-volume-mute"></i> -->
+                            </div>
+                            <div class="music-control__volume-progress">
+                                <input id="progress1" class="music-control__volume-input" type="range" value="100" step="1" min="0" max="100">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MUSIC CONTROL -->
+        </div>
+  </main>
+
+  <!-- modal_layout -->
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body"> 
+            
+            <!-- login form -->
+             <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="modal-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <span class="auth-form__switch-btn js-subrised">Đăng ký</span>
+                    </div>
+    
+                    <div class="auth-form__form">       
+                        <div class="auth-form-group">
+                            <input type="text" class="auth-form-input" placeholder="Tên đăng nhập">
+                        </div>
+                        <div class="auth-form-group">
+                            <input type="password" class="auth-form-input" placeholder="Nhập mật khẩu">
+                        </div>
+                    </div>
+                    <div class="auth-form-aside">
+                        <div class="auth-form-help">
+                            <a href="#" class="auth-form-help-link auth-form-help-forgot">Quên mật khẩu</a>
+                            <span class="auth-form-help-saparate"></span>
+                            <a href="#" class="auth-form-help-link">Cần trợ giúp?</a>
+                        </div>
+                    </div>
+                    <div class="auth-form__controls">
+                        <button class="btn btn--normal auth-form__controls-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+    
+                <div class="auth-form__socials">
+                    <a href="#" class="auth-form__socials--sms btn btn--size-s">
+                        <i class="auth-form__socials-icon fa-solid fa-comment-dots"></i>    
+                        <span class="auth-form__socials-title">SMS</span>
+                    </a>
+                    <a href="#" class="auth-form__socials--facebook btn btn--size-s">
+                        <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                        <span class="auth-form__socials-title">Facebook</span>
+                    </a>
+                    <a href="#" class="auth-form__socials--google btn btn--size-s">
+                        <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                        <span class="auth-form__socials-title">Google</span>
+                    </a>
+                    
+                </div>
+                
+            </div> 
+        </div>
+    </div>
+    <!-- register form -->
+         <!-- <div class="auth-form">
+        <div class="auth-form__container">
+            <div class="modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="auth-form__header">
+                <h3 class="auth-form__heading">Đăng ký</h3>
+                <span class="auth-form__switch-btn">Đăng nhập</span>
+            </div>
+            <div class="auth-form__form">
+                
+                <div class="auth-form-group">
+                    <input type="text" class="auth-form-input" placeholder="Tên đăng nhập">
+                </div>
+                <div class="auth-form-group">
+                    <input type="password" class="auth-form-input" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="auth-form-group">
+                    <input type="password" class="auth-form-input" placeholder="Nhập lại mật khẩu">
+                </div>
+
+            </div>
+            <div class="auth-form__controls">
+                <button class="btn auth-form__controls-back">TRỞ LẠI</button>
+                <button class="btn auth-form__controls-subrised">ĐĂNG KÝ</button>
+            </div>
+        </div>
+
+        <div class="auth-form__socials">
+            <a href="#" class="auth-form__socials--facebook btn btn--size-s">
+                <i class="auth-form__socials-icon fa-brands fa-square-facebook"></i>
+                <span class="auth-form__socials-title">Kết nối với Facebook</span>
+            </a>
+            <a href="#" class="auth-form__socials--google btn btn--size-s">
+                <i class="auth-form__socials-icon fa-brands fa-google"></i>
+                <span class="auth-form__socials-title">Kết nối với Google</span>
+            </a>
+        </div>
+    </div>    -->
+
+
+
+
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-1.11.0.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+
+
+    <script src="/assets/js/khampha.js"></script>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
